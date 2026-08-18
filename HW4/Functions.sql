@@ -16,13 +16,12 @@ $$;
 SELECT 
     EmployeeID, FirstName, LastName, Department, Salary,
     CalculateAnnualBonus(EmployeeID, Salary) AS annual_bonus
-FROM Employees
-
+FROM Employees;  --ДОБАВЛЕНА ;
 
 CREATE OR REPLACE VIEW IT_Department_View AS
 SELECT 
     EmployeeID, FirstName, LastName, Salary
 FROM Employees
-WHERE Department = 'Senior_IT';
+WHERE Department = 'Senior_IT'; 
 
 SELECT * FROM IT_Department_View;
