@@ -1,5 +1,5 @@
-select 
-first_name,
-age
-from Customers 
-order by age
+SELECT 
+    first_name,
+    age
+FROM Customers 
+ORDER BY age DESC;
