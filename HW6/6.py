@@ -8,7 +8,7 @@ elif operator == '-':
 elif operator == '*':
     print(num1 * num2)
 elif operator == '/':
-    if nub2 == 0;
+    if num2 == 0;
         print('На 0 делить нельзя!')
 else: print(num1/num2)
     print(num1 / num2)
