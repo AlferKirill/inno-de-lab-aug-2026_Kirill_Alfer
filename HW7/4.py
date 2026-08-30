@@ -11,7 +11,7 @@ set_requesred_roles = set(requested_roles)
 #множеств).
 required_admin_roles = {"admin", "security_officer",
 "audit_manager"}
-common_roles = required_admin_roles and set_requesred_roles
+common_roles = required_admin_roles & set_requesred_roles
 print(f"Общие роли{common_roles}")
 
 #Вычисляем недостающие административные роли, которые не были запрошены
@@ -24,7 +24,7 @@ print(f'Незапрошенные роли: {uncommon_roles}')
 #запрошенных ролей с помощью высокопроизводительного оператора членства,
 #выполняющегося за время O(1).
 
-if 'security_officer' in required_admin_roles:
+if 'security_officer' in set_requesred_roles:
     print('security_officer есть в запросе')
 else:
     print('security_officer нет в запросе')

@@ -7,13 +7,14 @@ db_config = {
 }
 }
 # Ваш код здесь
-db_host = db_config["connection"]["host"]
-db_port = db_config["connection"]["port"]
+db_host = db_config.get("connection", {}).get("host", "localhost")
+db_port = db_config.get("connection", {}).get("port", 5432)
+db_user = db_config.get("connection", {}).get("user", "default_user")
 print("db_host:", db_host)
 print("db_port:", db_port)
 # Безопасное получение ssl_mode с дефолтным значением
 ssl_mode = db_config.get("connection", {}).get("ssl_settings", {}).get("ssl_mode", "verify-full")
-print(f"ssl_mode: {ssl_mode}")  # ssl_mode: require
+print(f"ssl_mode: {ssl_mode}")
 #изменяем значение user на admin
 db_config["connection"]["user"] = 'admin'
 print(f"db_user: {db_config['connection']['user']}")
