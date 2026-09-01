@@ -34,7 +34,7 @@ def perfomance_logger(
         start_time = time.perf_counter()
         result = func(*args, **kwargs)
         end_time = time.perf_counter()
-        execution_time = round(end_time - start_time) * TIME_DECIMALS
+        execution_time = round((end_time - start_time) * TIME_DECIMALS)
 
         print(f"{PERFORMANCE_LOG_PREFIX} "
             f"Функция '{func.__name__}' выполнена " 
